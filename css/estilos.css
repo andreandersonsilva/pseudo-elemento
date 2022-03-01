@@ -1,0 +1,59 @@
+body{
+    font-size:32px
+}
+
+h1{
+    margin:0;
+}
+
+article{
+    background-color: #0f0;
+}
+
+footer{
+    background-color: yellow;
+    text-align: center;
+}
+
+.coluna1, .coluna2{
+    background-color: #ccc;
+}
+
+.coluna1{
+    float: left;
+    width: 48%;
+}
+
+.coluna2{
+    float: right;
+    width: 48%;
+}
+
+/*Elemento usado pra ajustar as caixas e neste caso o footer, porém há outra forma que será usad nesta aula*/
+/*.clearfix{
+    clear:both;
+}
+*/
+
+/*Forma de modificar a primeira fonte de uma paragrafo / Lembrando que a classe é um filho de article*/
+article >p::first-letter{
+    font-size:60px;
+    color:red;
+}
+/*Elemento para inserir conteúdo antes e depois da linha informada, porém o que for inserido no before não vai aparecer na pasta HTML*/
+h1::before{
+    content: "Título: ";
+}
+/*
+h1::after{
+    content: ": Fim!";
+}
+*/
+
+/*Forma de substituir o clearfix, assim que termina o arquivo ele informa que quer que limpe o both*/
+article::after{
+    /*content em branco onde seria inserido um texto*/
+    content:"";
+    display: block;
+    clear:both;
+}
